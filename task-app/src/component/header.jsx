@@ -15,9 +15,12 @@ import {
   import Services from './Services';
   import Loops from './loops';
   import Gallary from './gallary';
+  import State from './state';
+  import Menubar from './menubar';
+  import Comp from './comp';
 
   export default function header(){
-    const Numbers = {'/home':'Home', '/about':'About', '/services':'Services', '/loops':'Loops','/gallary':'Gallary'}
+    const Numbers = {'/home':'Home', '/about':'About', '/services':'Services', '/loops':'Loops','/gallary':'Gallary','/state':'State','/menubar':'Menubar','/comp':'Comp'}
     const returndata = Object.entries(Numbers).map((res,i)=>{
         return  <li className="nav-item" key={i}>
                      <Link className="nav-link" to={res[0]}>{res[1]}</Link>
@@ -46,6 +49,9 @@ import {
     <Route path='/services' element={<Services/>}/>
     <Route path='/loops' element={<Loops/>}/>
     <Route path='/gallary' element={<Gallary/>}/>
+    <Route path='/state' element={<State/>}/>
+    <Route path='/menubar' element={<Menubar/>}/>
+    <Route path='/comp' element={<Comp/>}/>
 </Routes>
 </Router>
         </>

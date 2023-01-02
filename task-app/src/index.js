@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap5/src/css/bootstrap.min.css';
-import Header from './component/01header';
+import Header from './component/header';
 
 
 
