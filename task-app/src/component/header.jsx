@@ -18,9 +18,13 @@ import {
   import State from './state';
   import Menubar from './menubar';
   import Comp from './comp';
+  import Api from './api';
+  import Useref from './function/Useref';
+  import Useform from './function/Useform';
 
   export default function header(){
-    const Numbers = {'/home':'Home', '/about':'About', '/services':'Services', '/loops':'Loops','/gallary':'Gallary','/state':'State','/menubar':'Menubar','/comp':'Comp'}
+    const Numbers = {'/home':'Home', '/about':'About', '/services':'Services', '/loops':'Loops','/gallary':'Gallary','/state':'State',
+    '/menubar':'Menubar','/comp':'Comp','/api':'Api','/useref':'UseRef','/useform':'Useform'}
     const returndata = Object.entries(Numbers).map((res,i)=>{
         return  <li className="nav-item" key={i}>
                      <Link className="nav-link" to={res[0]}>{res[1]}</Link>
@@ -52,6 +56,10 @@ import {
     <Route path='/state' element={<State/>}/>
     <Route path='/menubar' element={<Menubar/>}/>
     <Route path='/comp' element={<Comp/>}/>
+    <Route path='/api' element={<Api/>}/>
+    <Route path='/useref' element={<Useref/>}/>
+    <Route path='/useform' element={<Useform/>}/>
+
 </Routes>
 </Router>
         </>
